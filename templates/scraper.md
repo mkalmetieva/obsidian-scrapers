@@ -4,7 +4,7 @@ clipboard = clipboard.trim(); // remove whitespace from both ends
 let urlExpression = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gmi;
 let urlRegex = new RegExp(urlExpression);
 
-if (clipboard.includes("/www.youtube.com/")) {
+if (clipboard.includes("youtube.com/")) {
   // Insert YouTube template
   tR += await tp.file.include("[[youtube]]");
 } else if (clipboard.includes("/youtu.be/")) {
@@ -14,7 +14,7 @@ if (clipboard.includes("/www.youtube.com/")) {
   tR += await tp.file.include("[[youtube]]");
 } else if (clipboard.includes("/www.goodreads.com/")) {
   tR += await tp.file.include("[[goodreads]]");
-} else if (clipboard.includes("/www.imdb.com/")) {
+} else if (clipboard.includes("imdb.com/")) {
   tR += await tp.file.include("[[imdb]]");
 } else if (clipboard.includes("/letterboxd.com/")) {
   tR += await tp.file.include("[[letterboxd]]");
